@@ -1,0 +1,11 @@
+To describe Images AMI
+aws ec2 describe-images  --image-id ami-00ba7707ac0ac50bb
+
+Run Instances 
+aws ec2 run-instances  --image-id ami-00ba7707ac0ac50bb --count 1 --instance-type t2.micro --key-name Kavya_AWSkey
+
+Terminate 
+ aws ec2 terminate-instances --instance-id i-0e43d4925ffbe9f0d
+Start/stop instances
+aws ec2 start-instances --instance-ids i-00b12e6ee26487772
+aws ec2 stop-instances --instance-ids i-00b12e6ee26487772
