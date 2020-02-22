@@ -16,3 +16,4 @@ aws ec2 describe-instance-status --include-all-instances --filters Name=instance
 if [[ $(aws ec2 describe-instances --instance-ids i-abcd1234defg5678 --query 'Reservations[].Instances[].State[].Name' --output text) = "running" ]] ; then 
 \ aws ec2 stop-instances --instance-ids i-abcd1234defg5678; \ elif [[ $(aws ec2 describe-instances --instance-ids i-abcd1234defg5678 --query 'Reservations[].Instances[].State[].Name' --output text) = "stopped" ]] ; then \ aws ec2 start-instances --instance-ids i-abcd1234defg5678 ; \
  fi
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId]' --filters Name=instance-state-name,Values=running --output text
