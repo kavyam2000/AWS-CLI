@@ -17,3 +17,5 @@ if [[ $(aws ec2 describe-instances --instance-ids i-abcd1234defg5678 --query 'Re
 \ aws ec2 stop-instances --instance-ids i-abcd1234defg5678; \ elif [[ $(aws ec2 describe-instances --instance-ids i-abcd1234defg5678 --query 'Reservations[].Instances[].State[].Name' --output text) = "stopped" ]] ; then \ aws ec2 start-instances --instance-ids i-abcd1234defg5678 ; \
  fi
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId]' --filters Name=instance-state-name,Values=running --output text
+
+https://www.thegeekstuff.com/2016/04/aws-ec2-cli-examples/
