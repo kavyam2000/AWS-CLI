@@ -9,3 +9,5 @@ Terminate
 Start/stop instances
 aws ec2 start-instances --instance-ids i-00b12e6ee26487772
 aws ec2 stop-instances --instance-ids i-00b12e6ee26487772
+aws ec2 describe-instance-status --include-all-instances --filters Name=instance-state-name,Values=running
+ { "InstanceStatuses": [] }
