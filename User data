@@ -1,0 +1,5 @@
+Create to New user data
+#! /bin/bash
+touch /root/somefile.txt
+
+Had to go to root directory to see the file.
